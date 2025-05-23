@@ -1,0 +1,16 @@
+.top__content {
+  padding: 171px 55px 100px;
+  background: url("../../assets/images/bg-image.png") no-repeat right / cover;
+}
+
+@media (max-width: 740px) {
+  .top__content {
+    padding: 130px 20px 32px;
+  }
+}
+
+@media (max-width: 424px) {
+  .top__content {
+    background-position: -858px;
+  }
+}

@@ -1,0 +1,19 @@
+@use "base/reset.scss";
+@use "base/typography.scss";
+@use "base/base.scss";
+
+@use "abstracts/variables.scss";
+
+
+@use "layout/header.scss";
+@use "layout/top.scss";
+
+
+@use "components/button.scss";
+
+
+
+
+.main {
+    height: 2000px;
+}
