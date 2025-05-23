@@ -1,15 +1,17 @@
 .header {
   width: 100%;
   position: fixed;
-  padding-top: 77px;
-  padding-bottom: 17px;
-  top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 57px;
   z-index: 1000;
   transition: 0.4s all linear;
 }
 
 .header.scrolled {
-    background-color: var(--white);
+  top: 0;
+  position: fixed;
+  background-color: var(--white);
 }
 
 .header__inner {

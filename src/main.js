@@ -35,10 +35,9 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY || window.pageYOffset;
-
   if (scrollY > 50) {
-    header.classList.add("scrolled"); 
+    header.classList.add("scrolled");
   } else {
-    header.classList.remove("scrolled"); 
+    header.classList.remove("scrolled");
   }
 });
