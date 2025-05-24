@@ -4,9 +4,7 @@ function buildDevServer(options) {
     port,
     hot: true,
     open: true,
-    static: {
-      directory: paths.build,
-    },
+    watchFiles: ["src/**/*.html"],
   };
 }
 

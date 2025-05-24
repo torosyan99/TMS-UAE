@@ -8,11 +8,14 @@ function buildWebpackConfig(options) {
   return {
     mode,
     entry: paths.src,
-    devtool: isDev && 'inline-source-map',
+    devtool: isDev && "inline-source-map",
     output: {
       path: paths.build,
       filename: "js/[name].[contenthash:6].js",
       clean: true,
+    },
+    optimization: {
+      runtimeChunk: isDev ? "single" : undefined,
     },
     plugins: buildPlugins(options),
     module: {
