@@ -5,14 +5,14 @@ const questionsListItems = questionsList.children;
 let activeBox;
 let activeNeighbor;
 let activeIndex = 0;
-
+let activeButton;
 
 questionsList.addEventListener("click", (e) => {
-  const questionsListHeight = '387';
+  const questionsListHeight = "387";
   const target = e.target;
   const button = target.closest(".questions__button");
   if (button) {
-    if (activeBox) {
+    if (activeBox || button == activeButton) {
       activeBox.style.height = 100 + "%";
       activeNeighbor.className = "questions__box";
 
@@ -22,6 +22,11 @@ questionsList.addEventListener("click", (e) => {
           cln.className = "questions__box";
         }, 400);
       } else activeBox.className = "questions__box";
+
+      if (button == activeButton) {
+        activeButton = null;
+        return;
+      }
     }
 
     const box = button.parentElement;
@@ -42,6 +47,8 @@ questionsList.addEventListener("click", (e) => {
     activeNeighbor = neighborBox;
     activeBox = box;
     activeIndex = itemIndex;
+
+    activeButton = button;
   }
 });
 
