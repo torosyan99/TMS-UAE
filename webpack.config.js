@@ -16,6 +16,10 @@ const config = (env) => {
     fonts: path.resolve(__dirname, "src", "assets", "fonts"),
   };
 
+  const alias = {
+   '@images': path.resolve(__dirname, 'src', 'assets', 'images')
+  }
+
   const pages = generateHtmls(pagesPath)
   
 
@@ -25,6 +29,7 @@ const config = (env) => {
     paths,
     pages,
     isDev,
+    alias
   };
   return buildWebpackConfig(options);
 };

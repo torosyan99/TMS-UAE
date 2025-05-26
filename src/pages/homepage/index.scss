@@ -99,14 +99,15 @@
         background-color: #fbf9f6;
       }
 
-      .services__price {
-        padding-top: 30px;
-      }
-
       &.factors td {
         padding: 16px;
       }
     }
+
+    .services__price {
+      padding-top: 30px;
+    }
+
     th {
       width: 242px;
       padding-bottom: 11px;
@@ -116,7 +117,8 @@
 
   .services__table-top {
     width: 234px;
-
+    font-weight: 800;
+    line-height: 113.4%;
     padding: 19px 0;
     font-size: 22px;
     color: var(--white);
@@ -125,14 +127,19 @@
 
     &.basic {
       background-color: #d8e3f3;
+      color: var(--primary-color);
     }
 
     &.standard {
-      background-color: #6f96d1;
+      background-color: var(--blue-2);
     }
 
     &.advanced {
-      background-color: #2e4396;
+      background-color: var(--blue);
+    }
+
+    &.mobile {
+      display: none;
     }
   }
 
@@ -145,7 +152,6 @@
   .services__tablet {
     width: 233px;
     height: 550px;
-    flex-shrink: 0;
     border-radius: 18px;
     padding: 143px 16px 186px;
     color: var(--white);
@@ -159,20 +165,26 @@
     margin: 8px 0 18px;
   }
 
+  .services__factors {
+    text-align: center;
+  }
+
   .services__factor {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
-    &::before {
-      content: "";
-      min-width: 4px;
-      min-height: 4px;
-      background-color: #000;
-      border-radius: 50%;
-      position: absolute;
-      top: 9px;
-      left: -13px;
+    span {
+      position: relative;
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        top: 10px;
+        left: -12px;
+      }
     }
+    margin: 0 auto;
   }
 
   .services__additional {
@@ -186,6 +198,9 @@
     width: 100%;
     border-collapse: collapse;
 
+    .services__price {
+      font-size: 19px;
+    }
     .services__table-item {
       &:nth-child(even) .services__price {
         padding: 33px 119px 33px 32px;
@@ -224,7 +239,6 @@
     flex-wrap: wrap;
     margin-top: 44px;
     overflow: hidden;
-    // height: 387px;
   }
 
   .questions__item {
@@ -232,10 +246,8 @@
     position: relative;
     min-height: 205px;
 
-    &:nth-child( n + 5) {
+    &:nth-child(n + 5) {
       min-height: 169px;
-    }
-    &.active {
     }
   }
 
@@ -243,9 +255,10 @@
     padding: 24px 12px;
     background-color: var(--gold);
     border-radius: 21px;
-    transition: 0.4s all linear;
+    transition: 0.6s all linear;
     overflow: hidden;
     height: 100%;
+
     &.active-bottom,
     &.active {
       position: absolute;
@@ -254,7 +267,7 @@
       z-index: 100;
 
       .questions__text {
-        height: 100%;
+        height: auto;
         opacity: 1;
       }
 
@@ -280,23 +293,27 @@
   }
 
   .questions__button {
+    width: 100%;
     margin-top: 11px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-align: start;
     font-weight: 700;
-    align-items: flex-start;
-
+    font-size: 18px;
+    gap: 0 6px;
     svg {
-      transition: 0.4s all linear;
+      transition: 0.6s all linear;
     }
   }
 
   .questions__text {
-    opacity: 0;
+    transition: 0.6s all linear;
+    padding-top: 4px;
     height: 0;
-    transition: .4s opaciaty linear;
-    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 14px;
   }
 }
 
@@ -318,19 +335,21 @@
     .about__box {
       padding: 24px;
       border-radius: 24px;
-      background: rgb(111, 150, 209);
-    }
-
-    .about__item {
-      gap: 12px;
-
-      &:first-child {
-        align-items: flex-start;
-      }
+      background: var(--blue-2);
     }
 
     .about__list {
       margin-top: 32px;
+    }
+    .about__item {
+      gap: 12px;
+
+      br {
+        display: none;
+      }
+      &:first-child {
+        align-items: flex-start;
+      }
     }
 
     .about__text {
@@ -345,6 +364,210 @@
       display: none;
     }
   }
+
+  .services {
+    padding-top: 126px;
+
+    .services__wrapper {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 16px;
+    }
+
+    .services__table-top {
+      width: 100%;
+      margin-left: 0;
+      font-size: 20px;
+      justify-content: space-between;
+      padding: 12px 10px;
+      align-items: center;
+
+      &.mobile {
+        display: flex;
+        svg {
+          transition: 0.4s all linear;
+        }
+        &.active {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .services__tablet {
+      width: 100%;
+      height: 200px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 63.54px auto;
+      gap: 0 18px;
+      background: url(../../assets/images/homepage/tablet-bg-t.png) no-repeat
+        right / 100% 100%;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: start;
+    }
+
+    .services__tablet-icon {
+      grid-row: 1 / 3;
+      width: 63.54px;
+      height: 59px;
+      align-self: center;
+    }
+
+    .services__tablet-title {
+      margin: 0 0 8px;
+      font-size: 28px;
+      align-self: flex-end;
+    }
+
+    .services__tablet-text {
+      max-width: 384px;
+    }
+
+    .services__complex-wrapper {
+      max-height: 0px;
+      overflow: hidden;
+      transition: 0.4s all linear;
+
+      &.show {
+        max-height: 600px;
+      }
+
+      &.basic,
+      &.standard,
+      &.advanced {
+        .services__basic-td {
+          display: table-cell;
+        }
+
+        td:nth-child(n + 2) {
+          border-radius: 0 13px 13px 0;
+        }
+      }
+      &.basic {
+        grid-row: 2 / 3;
+      }
+
+      &.standard {
+        grid-row: 3 / 4;
+      }
+
+      &.advanced {
+        grid-row: 4 / 5;
+      }
+    }
+
+    .services__complex-table {
+      padding-top: 4px;
+
+      .services__table-item {
+        &:nth-child(even) {
+          td {
+            padding: 8px 16px;
+          }
+        }
+
+        td {
+          padding: 20px 16px;
+        }
+
+        &.factors {
+          td {
+            padding: 24px 16px;
+          }
+        }
+      }
+
+      td:not(td:first-child),
+      th {
+        display: none;
+      }
+
+      .services__price {
+        font-size: 20px;
+        padding-top: 20px;
+      }
+    }
+
+    .services__additional-table {
+      font-size: 18px;
+      th {
+        padding: 20px 30px;
+        text-align: end;
+      }
+
+      .services__price {
+        text-align: end;
+        text-wrap: nowrap;
+      }
+
+      .services__table-item {
+        td {
+          padding: 8px 200px 8px 16px;
+        }
+
+        &:nth-child(even) {
+          .services__price {
+            padding: 20px 16px 20px 10px;
+          }
+        }
+
+        &:nth-child(odd) {
+          .services__price {
+            padding: 8px 16px 8px 10px;
+          }
+        }
+      }
+    }
+
+    .services__additional-text {
+      font-size: 18px;
+      margin: 40px auto 16px;
+    }
+  }
+
+  .questions {
+    .questions__item {
+      width: calc(50% - 14px);
+
+      min-height: auto;
+
+      &:nth-child(n + 5) {
+        min-height: auto;
+      }
+    }
+
+    .questions__box {
+      padding: 16px;
+      &.active-bottom,
+      &.active {
+        position: static;
+
+        .questions__text {
+          max-height: 300px;
+        }
+      }
+
+      &.active-bottom {
+        bottom: 0;
+      }
+
+      &.bottom-neighbor {
+        transform: none;
+      }
+      &.top-neighbor {
+        transform: none;
+      }
+    }
+
+    .questions__text {
+      max-height: 0;
+      height: auto;
+      overflow: hidden;
+    }
+  }
 }
 
 @media (max-width: 740px) {
@@ -355,6 +578,62 @@
   .about {
     .consultation {
       margin-top: 40px;
+    }
+  }
+
+  .services {
+    padding-top: 90px;
+
+    .services__wrapper {
+      margin-top: 32px;
+    }
+
+    .services__tablet {
+      padding: 20px;
+      height: 180px;
+      background: url(../../assets/images/homepage/tablet-bg-m.png) no-repeat
+        right / 100% 100%;
+      grid-template-columns: 41.12px auto;
+    }
+
+    .services__tablet-icon {
+      width: 41.12px;
+      height: 38.19px;
+    }
+
+    .services__additional-table {
+      font-size: 16px;
+
+      .services__table-item {
+        td {
+          padding-right: 32px;
+        }
+      }
+    }
+  }
+
+  .questions {
+    .questions__item {
+      width: 100%;
+    }
+
+    .questions__box {
+      display: grid;
+      gap: 19px;
+      padding: 12px;
+      grid-template-columns: 66px auto;
+      gap: 0 12px;
+    }
+
+    .questions__img {
+      grid-row: 1 / 3;
+    }
+
+    .questions__button {
+      margin-top: 0;
+    }
+    .questions__text {
+      padding-top: 4px;
     }
   }
 }

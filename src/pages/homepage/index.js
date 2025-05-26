@@ -8,7 +8,9 @@ let activeIndex = 0;
 let activeButton;
 
 questionsList.addEventListener("click", (e) => {
-  const questionsListHeight = "387";
+  const width = window.innerWidth;
+
+  const questionsListHeight = width > 1290 ? "387px" : "auto";
   const target = e.target;
   const button = target.closest(".questions__button");
   if (button) {
@@ -42,13 +44,21 @@ questionsList.addEventListener("click", (e) => {
     );
 
     box.classList.add(positionItem ? "active" : "active-bottom");
-    box.style.height = questionsListHeight + "px";
+    box.style.height = questionsListHeight;
 
     activeNeighbor = neighborBox;
     activeBox = box;
     activeIndex = itemIndex;
-
     activeButton = button;
+  }
+});
+
+window.addEventListener("resize", () => {
+  const width = window.innerWidth;
+  const questionsListHeight = width > 1290 ? "387px" : "100%";
+
+  if (activeBox) {
+    activeBox.style.height = questionsListHeight;
   }
 });
 
@@ -64,3 +74,42 @@ function findActiveBoxIndex(item) {
 
   return index;
 }
+
+const serviceComplex = document.querySelector(".services__complex");
+const servicesWrapper = document.querySelector(".services__complex-wrapper");
+let active;
+let timeOut;
+
+serviceComplex.addEventListener("click", (e) => {
+  const target = e.target;
+  const button = target.closest(".services__table-top");
+  if (button && button.tagName == "BUTTON") {
+    if (active) {
+      servicesWrapper.classList.remove("show");
+      if (timeOut) return;
+
+      setTimeout(() => {
+        active.classList.remove("active");
+        if (button == active) {
+          servicesWrapper.className = "services__complex-wrapper";
+          active = null;
+        } else {
+          servicesWrapper.className =
+            "services__complex-wrapper" + " " + button.dataset.service;
+          servicesWrapper.classList.add("show");
+          button.classList.add("active");
+          active = button;
+        }
+      }, 400);
+
+      return;
+    }
+
+    servicesWrapper.classList.add(button.dataset.service);
+    button.classList.add("active");
+    active = button;
+    setTimeout(() => {
+      servicesWrapper.classList.add("show");
+    }, 100);
+  }
+});

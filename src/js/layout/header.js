@@ -2,6 +2,7 @@ const header = document.querySelector(".header");
 
 let open = false;
 document.body.addEventListener("click", (e) => {
+  console.log('click')
   const target = e.target;
   const width = window.innerWidth;
   if (target.closest(".header__menu-button")) {

@@ -1,6 +1,7 @@
 const buildLoaders = require("./buildLoaders");
 const buildPlugins = require("./buildPlugins");
 const buildDevServer = require("./buildDevServer");
+const buildResolve = require("./buildResolve");
 
 function buildWebpackConfig(options) {
   const { paths, mode, isDev } = options;
@@ -22,6 +23,7 @@ function buildWebpackConfig(options) {
       rules: buildLoaders(options),
     },
     devServer: isDev ? buildDevServer(options) : undefined,
+    resolve: buildResolve(options)
   };
 }
 
