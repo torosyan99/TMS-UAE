@@ -21,16 +21,16 @@
                   <a class="header__link" href="#">Учет и налоги</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="#">Цены</a>
+                  <a class="header__link"  href="#">Цены</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="#">Другие услуги</a>
+                  <a class="header__link" href="services.html">Другие услуги</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="#">О нас</a>
+                  <a class="header__link" href="about.html">О нас</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="#">Контакты</a>
+                  <a class="header__link" href="contacts.html">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -108,7 +108,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__content">
             <div class="about__box">
@@ -132,8 +132,7 @@
                     </svg>
                   </div>
                   <p class="about__text">
-                    Формирование и контроль корректности <br />
-                    первичных документов
+                    Формирование и контроль корректности первичных документов
                   </p>
                 </li>
                 <li class="about__item">
@@ -165,8 +164,8 @@
                     </svg>
                   </div>
                   <p class="about__text">
-                    Регистрация по корпоративному налогу, <br />
-                    расчет, подача деклараций
+                    Регистрация по корпоративному налогу, расчет, подача
+                    деклараций
                   </p>
                 </li>
                 <li class="about__item">
@@ -198,8 +197,8 @@
                     </svg>
                   </div>
                   <p class="about__text">
-                    Восстановление бухгалтерского учета и <br />
-                    отражение транзакций за предыдущие периоды
+                    Восстановление бухгалтерского учета и отражение транзакций
+                    за предыдущие периоды
                   </p>
                 </li>
                 <li class="about__item">
@@ -209,8 +208,8 @@
                     </svg>
                   </div>
                   <p class="about__text">
-                    Помощь в настройке и внедрении <br />
-                    бухгалтерского программного обеспечения
+                    Помощь в настройке и внедрении бухгалтерского программного
+                    обеспечения
                   </p>
                 </li>
               </ul>
@@ -261,10 +260,10 @@
                 </div>
                 <textarea
                   class="consultation__input consultation__textarea"
-                  placeholder="Какие вопросы вас интересуют"
+                  placeholder="Какие вопросы вас интересуют?"
                 ></textarea>
                 <div class="consultation__bottom">
-                  <button class="consultation__button button">Отправить</button>
+                  <button class="button">Отправить</button>
                   <p class="consultation__bottom-text">
                     Нажимая «Отправить», вы даете согласие на обработку
                     персональных данных в соответствии с
@@ -277,7 +276,7 @@
         </div>
       </section>
 
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <div class="services__complex">
             <h3 class="title">Комплексные решения</h3>
@@ -422,7 +421,10 @@
                     </td>
                   </tr>
                   <tr class="services__table-item">
-                    <td>Стоимость <br /> (без НДС)</td>
+                    <td>
+                      Стоимость <br />
+                      (без НДС)
+                    </td>
                     <td class="services__price services__basic-td">
                       от 1000 AED/ месяц
                     </td>
@@ -455,7 +457,7 @@
                 <th></th>
                 <th>
                   Стоимость <br />
-                  (без НДС)
+                  <span class="services__nowrap">(без НДС)</span>
                 </th>
               </tr>
 
@@ -480,13 +482,16 @@
                 <td class="services__price">от 3000 AED</td>
               </tr>
               <tr class="services__table-item">
-                <td>Консультации по учету и налогам (1 hour)</td>
+                <td>
+                  Консультации по учету и налогам
+                  <span class="services__nowrap">(1 hour)</span>
+                </td>
                 <td class="services__price">от 1000 AED</td>
               </tr>
             </table>
             <p class="services__additional-text text-bold">
               Не нашли нужную услугу? Свяжитесь с нами — мы предложим
-              индивидуальное решение для вашего бизнеса
+              индивидуальное решение для вашего бизнеса!
             </p>
             <button class="button">Получить индивидуальный расчет</button>
           </div>
@@ -499,9 +504,12 @@
           <ul class="questions__list">
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-1"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-1.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Надежное бухгалтерское и налоговое сопровождение</span>
                   <svg width="19" height="9" fill="#000">
@@ -516,9 +524,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-2"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-2.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Команда профессионалов</span>
                   <svg width="19" height="9" fill="#000">
@@ -526,17 +537,20 @@
                   </svg>
                 </button>
                 <p class="questions__text">
-                  Наши специалисты обладают многолетним опытом работы с
-                  бизнесами разных масштабов и отраслей, что позволяет находить
-                  оптимальные решения для каждого клиента
+                  Мы обладаем многолетним опытом работы с бизнесами разных
+                  масштабов и отраслей, что позволяет находить оптимальные
+                  решения для каждого клиента
                 </p>
               </div>
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-3"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-3.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Локальная экспертиза</span>
                   <svg width="19" height="9" fill="#000">
@@ -544,17 +558,20 @@
                   </svg>
                 </button>
                 <p class="questions__text">
-                  Специалисты, которые детально понимают требования
-                  законодательства ОАЭ в части учета и налогов, обеспечивая
-                  своевременное и точное отражение транзакций
+                  Мы детально понимаем требования законодательства ОАЭ в части
+                  учета и налогов, обеспечивая своевременное и точное отражение
+                  транзакций
                 </p>
               </div>
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-4"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-4.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Прозрачность и контроль</span>
                   <svg width="19" height="9" fill="#000">
@@ -570,9 +587,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-5"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-5.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Комплексные решения для бизнеса</span>
                   <svg width="19" height="9" fill="#000">
@@ -587,9 +607,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-6"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-6.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Индивидуальный подход</span>
                   <svg width="19" height="9" fill="#000">
@@ -605,9 +628,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="59" height="59">
-                  <use xlink:href="images/sprite.svg#questions-icon-7"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-7.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Гибкие тарифы</span>
                   <svg width="19" height="9" fill="#000">
@@ -622,9 +648,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-8"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-8.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Отсутствие языкового барьера </span>
                   <svg width="19" height="9" fill="#000">
@@ -638,9 +667,12 @@
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="59" height="59">
-                  <use xlink:href="images/sprite.svg#questions-icon-9"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-9.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Оптимизация и системный подход</span>
                   <svg width="19" height="9" fill="#000">
@@ -648,16 +680,19 @@
                   </svg>
                 </button>
                 <p class="questions__text">
-                  Внедряем четкие процессы, автоматизацию и контроль для
+                  Мы внедряем четкие процессы, автоматизацию и контроль для
                   эффективного ведения учета
                 </p>
               </div>
             </li>
             <li class="questions__item">
               <div class="questions__box">
-                <svg class="questions__img" width="52" height="52">
-                  <use xlink:href="images/sprite.svg#questions-icon-1"></use>
-                </svg>
+                <div class="questions__img-wrapper">
+                  <img
+                    class="questions__img"
+                    src="images/questions-icon-10.png"
+                  />
+                </div>
                 <button class="questions__button">
                   <span>Экономия</span>
                   <svg width="19" height="9" fill="#000">
@@ -700,13 +735,13 @@
                 <a class="footer__link" href="#">Цены</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Другие услуги</a>
+                <a class="footer__link" href="services.html">Другие услуги</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">О нас</a>
+                <a class="footer__link" href="about.html">О нас</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Контакты</a>
+                <a class="footer__link" href="contacts.html">Контакты</a>
               </li>
             </ul>
           </nav>

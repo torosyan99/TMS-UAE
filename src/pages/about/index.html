@@ -1,11 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <a class="header__logo" href="/">
+            <svg class="header__logo-img" width="171" height="46">
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="header__menu">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="#">Учет и налоги</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Цены</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="services.html">Другие услуги</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="about.html">О нас</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__right">
+              <a class="header__social" href="#">
+                <svg width="16" height="16" fill="#6F96D1">
+                  <use href="images/sprite.svg#whats-app"></use>
+                </svg>
+              </a>
+              <a class="header__social" href="#">
+                <svg class="tg-icon" width="14" height="14" fill="#6F96D1">
+                  <use href="images/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <button class="header__lang-button">
+                <!-- <svg width="28" height="28">
+                  <use xlink:href="images/sprite.svg#rus-flag"></use>
+                </svg> -->
+                <svg width="25" height="25">
+                  <use href="images/sprite.svg#eng-flag"></use>
+                </svg>
+                <span>ENG</span>
+              </button>
+            </div>
+          </div>
+          <button class="header__menu-button">
+            <span class="header__button-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="top">
+        <div class="container">
+          <div class="top__content">
+            <h1 class="top__title">
+              Ваш надежный партнер в области бухгалтерского и налогового
+              сопровождения в ОАЭ
+            </h1>
+            <p class="top__text">
+              Качественная поддержка на всех этапах — от регистрации бизнеса до
+              полного соответствия применимым требованиям
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-descr">
+        <div class="container">
+          <ul class="about-descr__list">
+            <li class="about-descr__item">
+              Наша команда обладает большим опытом и детальным пониманием
+              законодательства ОАЭ, что гарантирует высокую эффективность и
+              точность нашей работы
+            </li>
+            <li class="about-descr__item">
+              Мы строим сотрудничество с клиентами на принципах прозрачности,
+              эффективности и индивидуального подхода, обеспечивая точность и
+              надежность учета
+            </li>
+            <li class="about-descr__item">
+              Мы уделяем каждому клиенту особое внимание, делаем акцент на
+              долгосрочных отношениях и предлагаем максимально быстрые и
+              эффективные решения
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="our-work">
+        <div class="container">
+          <h3 class="title">Как мы работаем</h3>
+          <ul class="our-work__list">
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Заявка</h5>
+                <p class="our-work__text">Онлайн или через мессенджеры</p>
+              </div>
+            </li>
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Бесплатная консультация </h5>
+                <p class="our-work__text">
+                  Анализ бизнеса, <br />
+                  рекомендации
+                </p>
+              </div>
+            </li>
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Персонализированное предложение </h5>
+                <p class="our-work__text">Подбор оптимального тарифа</p>
+              </div>
+            </li>
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Официальное сотрудничество </h5>
+                <p class="our-work__text">Заключение договора</p>
+              </div>
+            </li>
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Полноценное сопровождение </h5>
+                <p class="our-work__text">
+                  Регулярные отчеты <br />
+                  и поддержка
+                </p>
+              </div>
+            </li>
+            <li class="our-work__item">
+              <div class="our-work__wrapper">
+                <h5 class="our-work__name">Оперативная коммуникация  </h5>
+                <p class="our-work__text">Быстрая обратная связь</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="clients">
+        <div class="container">
+          <h3 class="title">Наши клиенты нам доверяют</h3>
+          <ul class="clients__list">
+            <li class="clients__item">
+              <img
+                class="clients__img"
+                src="./images/clients-1.png"
+                alt="client-logo"
+              />
+            </li>
+            <li class="clients__item">
+              <img
+                class="clients__img"
+                src="./images/clients-2.png"
+                alt="client-logo"
+              />
+            </li>
+            <li class="clients__item">
+              <img
+                class="clients__img"
+                src="./images/clients-3.png"
+                alt="client-logo"
+              />
+            </li>
+            <li class="clients__item">
+              <img
+                class="clients__img"
+                src="./images/clients-4.png"
+                alt="client-logo"
+              />
+            </li>
+          </ul>
+
+          <button class="button">Начать работу с нами </button>
+        </div>
+      </section>
+
+      <section class="command">
+        <div class="container">
+          <div class="command__content">
+            <h3 class="command__title">Наша команда</h3>
+            <ul class="command__list">
+              <li class="command__item">
+                <img
+                  class="command__img"
+                  src="./images/command-1.png"
+                  alt="command"
+                />
+                <h5 class="command__item-title">
+                  <span>Игорь Каневцов </span>
+                  <span class="command__job-title"
+                    >Сооснователь/ Директор/ Управляющий в TMS|UAE</span
+                  >
+                </h5>
+                <p class="command__text">
+                  Игорь — эксперт в финансах с более чем 20-летним опытом работы
+                  в банковской сфере, аудите и области регуляторного комплаенса
+                  ЕС. Обладает успешным опытом управления финансами, процессами
+                  учета и отчетности, системами риск-менеджмента и внутреннего
+                  контроля и функциями комплаенса для регулируемых финансовых
+                  организаций.
+                  <br /><br />
+                  В TMS | UAE он отвечает за управление практикой фирмы в ОАЭ.
+                  Он курирует процессы оказания услуг клиентам и осуществляет
+                  взаимодействие с государственными органами. Под его
+                  управлением обеспечивается надёжная, своевременная и
+                  соответствующая законодательству поддержка, учитывающая
+                  индивидуальные требования и особенности ведения бизнеса
+                  клиентов в ОАЭ.
+                </p>
+              </li>
+              <li class="command__item">
+                <img
+                  class="command__img"
+                  src="./images/command-2.png"
+                  alt="command"
+                />
+                <h5 class="command__item-title">
+                  <span> Влад Макарычев</span>
+                  <span class="command__job-title"
+                    >Сооснователь/ Директор в TMS|UAE</span
+                  >
+                </h5>
+                <p class="command__text">
+                  Влад — эксперт с более чем 15-летним опытом в международном
+                  банковском бизнесе и консалтинге. Его профессиональный путь
+                  включает работу с транснациональными проектами в сфере
+                  финансов, корпоративного сопровождения и построения цифровой
+                  инфраструктуры.
+                  <br /><br />
+                  В TMS UAE он отвечает за стратегическое развитие компании,
+                  автоматизацию бизнес-процессов, проектирование IT-архитектуры
+                  и выстраивание устойчивых связей с финансовыми институтами и
+                  банками. Влад курирует запуск новых направлений, развитие
+                  партнёрских программ и внедрение технологий, повышающих
+                  эффективность клиентского обслуживания.
+                </p>
+              </li>
+              <li class="command__item">
+                <img
+                  class="command__img"
+                  src="./images/command-3.png"
+                  alt="command"
+                />
+                <h5 class="command__item-title">
+                  <span>Павел Котов </span>
+                  <span class="command__job-title"
+                    >Сооснователь/ Директор в TMS|UAE</span
+                  >
+                </h5>
+                <p class="command__text">
+                  Павел — эксперт в области международного структурирования
+                  бизнеса с более чем 10-летним опытом. Его профессиональная
+                  практика охватывает сопровождение сделок, финансовое
+                  планирование, создание холдинговых и инвестиционных структур в
+                  различных юрисдикциях, включая ЕС, ОАЭ и СНГ.
+                  <br /><br />
+                  В TMS | UAE он отвечает за финансовое управление, проработку
+                  клиентских структур, финансовую экспертизу и взаимодействие с
+                  юридическими консультантами и регистраторами.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__wrapper">
+            <a class="footer__logo" href="/">
+              <svg width="171" height="46">
+                <use xlink:href="images/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <p class="footer__text">
+              Все права защищены и охраняются законом. 2025
+            </p>
+            <a class="footer__link-underline" href="#"
+              >Политика конфиденциальности</a
+            >
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Учет и налоги</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Цены</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="services.html">Другие услуги</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="about.html">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__contacts">
+            <p class="footer__text-bold">
+              Нужны уточнения?<br />
+              Оставьте заявку или позвоните нам!
+            </p>
+            <a class="footer__telephone" href="tel:97142285285"
+              >+971 4228 52 85</a
+            >
+            <a class="footer__mail" href="mailto:info@tmsemirates.ae"
+              >info@tmsemirates.ae</a
+            >
+
+            <div class="footer__socials">
+              <a class="footer__social" href="#">
+                <svg width="16" height="16">
+                  <use href="images/sprite.svg#whats-app"></use>
+                </svg>
+              </a>
+              <a class="footer__social" href="#">
+                <svg class="tg-icon" width="14" height="14">
+                  <use href="images/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

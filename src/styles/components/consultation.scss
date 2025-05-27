@@ -3,7 +3,7 @@
   border-radius: 28px;
   padding: 37px 40px;
   background-color: var(--gold);
-}
+
 
 .consultation__title {
   font-size: 26px;
@@ -57,7 +57,7 @@
   margin-top: 4px;
 }
 
-.consultation__button {
+.button {
   padding: 13px 0;
   min-width: 191px;
 }
@@ -72,11 +72,13 @@
   color: inherit;
 }
 
+}
+
 @media (max-width: 1290px) {
   .consultation {
     max-width: 100%;
     padding: 24px;
-  }
+
 
   .consultation__title {
     font-size: 32px;
@@ -101,10 +103,12 @@
     width: 100%;
   }
 
-  .consultation__button {
+  .button {
     order: 1;
     max-width: 100%;
   }
+
+    }
 }
 
 @media (max-width: 740px) {

@@ -5,6 +5,7 @@
     border-radius: 28px;
     padding-left: 56px;
     padding-right: 56px;
+    overflow: hidden;
   }
 
   .top__title {
@@ -26,6 +27,11 @@
       padding: 0 16px;
       border-radius: 19.5px;
     }
+  }
+
+  .top__text {
+    margin-top: 15px;
+    max-width: 508px;
   }
 
   .top__button {
@@ -56,6 +62,7 @@
 
 @media (max-width: 1296px) {
   .top {
+    padding-top: 22px;
     .top__content {
       padding-left: 40px;
       padding-right: 40px;
@@ -79,6 +86,10 @@
     }
 
     .top__button {
+      margin-top: 32px;
+    }
+
+    .top__text {
       margin-top: 32px;
     }
   }
@@ -114,10 +125,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .top {
-    .top__content {
-      background-position: -800px;
-    }
-  }
-}

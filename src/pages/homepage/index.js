@@ -7,12 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeNeighbor;
   let activeIndex = 0;
   let activeButton;
-  const height = questionsList.getBoundingClientRect().height;
-  console.log(height);
 
   document.body.addEventListener("click", (e) => {
-    const width = window.innerWidth;
-    // const questionsListHeight = width > 1290 ? "387px" : "auto";
     const target = e.target;
     const button = target.closest(".questions__button");
     if (button) {
